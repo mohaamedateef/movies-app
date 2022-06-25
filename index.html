@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Movies App using API" />
+    <meta name="author" content="Mohamed Atef Mohamed" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/index-style.css" />
+    <title>Movies</title>
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="fixed-sidebar vh-100 position-fixed top-0 text-center">
+        <div class="logo w-100 pt-4">
+          <img src="images/logo.png" alt="Movies App Logo" class="img-fluid" />
+        </div>
+        <div
+          class="toggle-sidebar w-100 position-absolute top-50 translate-middle-y"
+        >
+          <i class="fa fa-align-justify fa-xl"></i>
+        </div>
+        <div class="sidebar-buttons w-100 position-absolute">
+          <i class="fa-solid fa-globe d-inline-block w-100 my-3"></i>
+          <i class="fa-solid fa-share-nodes d-inline-block w-100"></i>
+        </div>
+      </div>
+      <div class="slide-sidebar vh-100 position-fixed top-0 overflow-hidden">
+        <div class="categories w-100 h-50 overflow-hidden">
+          <ul class="pt-4">
+            <li>
+              <a href="#" class="text-capitalize">now playing</a>
+            </li>
+            <li>
+              <a href="#" class="text-capitalize">popular</a>
+            </li>
+            <li>
+              <a href="#" class="text-capitalize">top rated</a>
+            </li>
+            <li>
+              <a href="#" class="text-capitalize">trending</a>
+            </li>
+            <li>
+              <a href="#" class="text-capitalize">upcoming</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-capitalize">contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social align-self-end mb-3 p-4">
+          <a href="#"><i class="fa-brands fa-facebook-f me-3"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter me-3"></i></a>
+          <a href="#"><i class="fa-solid fa-globe me-3"></i></a>
+          <div class="mt-2">
+            <p>Copyright © 2022 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="home" class="pt-5">
+      <div class="container w-75">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="data-inputs">
+              <input
+                type="text"
+                class="form-control mb-5 text-white border border-0 rounded-0"
+                placeholder="Get Movies by Word..."
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-inputs">
+              <input
+                type="text"
+                class="form-control mb-5 text-white border border-0 rounded-0"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row movies g-4 mb-5"></div>
+        <div class="row">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link">Previous</a></li>
+              <li class="page-item active"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link">2</a></li>
+              <li class="page-item"><a class="page-link">3</a></li>
+              <li class="page-item"><a class="page-link">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <div class="container w-75">
+        <div class="row">
+          <h2 class="text-white my-5">Contact Us</h2>
+          <div class="col-md-6">
+            <div class="data-inputs">
+              <input
+                type="text"
+                class="form-control mb-3 text-white border border-0 rounded-0"
+                placeholder="Enter Your Name"
+              />
+              <p class="alert alert-danger d-none">Your Name is not valid</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-inputs">
+              <input
+                type="text"
+                class="form-control mb-3 text-white border border-0 rounded-0"
+                placeholder="Enter Email"
+              />
+              <p class="alert alert-danger d-none">Your Email is not valid</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-inputs">
+              <input
+                type="text"
+                class="form-control mb-3 text-white border border-0 rounded-0"
+                placeholder="Enter Phone Number"
+              />
+              <p class="alert alert-danger d-none">
+                Your Phone Number is not valid
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-inputs">
+              <input
+                type="text"
+                class="form-control mb-3 text-white border border-0 rounded-0"
+                placeholder="Enter Age"
+              />
+              <p class="alert alert-danger d-none">Your Age is not valid</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-inputs position-relative">
+              <input
+                type="password"
+                class="form-control mb-3 text-white border border-0 rounded-0"
+                placeholder="Enter Password"
+              />
+              <i
+                class="fa-solid fa-eye fa-1x position-absolute show-password"
+              ></i>
+              <p class="alert alert-danger d-none">
+                Your password is not valid. Minimum 8 characters. <br />
+                At least one letter, one number and one special character
+                (!@#$%^&*?)
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-inputs position-relative">
+              <input
+                type="password"
+                class="form-control mb-3 text-white border border-0 rounded-0"
+                placeholder="Enter Confirm Password"
+              />
+              <i
+                class="fa-solid fa-eye fa-1x position-absolute show-password"
+              ></i>
+              <p class="alert alert-danger d-none">
+                Your Confirm Password don't match your password
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline-danger disabled mt-3 submit-button">
+          Submit
+        </button>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
